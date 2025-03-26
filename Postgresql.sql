@@ -1,11 +1,34 @@
--- Connect to PostgreSQL datab
+-- Switch to the PostgreSQL superuser
+sudo -i -u postgres psql
+
+-- Create a new user in PostgreSQL
+CREATE USER DEEPA;
+
+-- Create a new database owned by DEEPA
+CREATE DATABASE OOPS OWNER DEEPA;
+
+-- Drop the database OOPS (if needed)
+DROP DATABASE OOPS;
+
+-- Drop user DEEPA (if needed)
+DROP USER DEEPA;
+
+-- Create a user named divithraju with a password
+CREATE USER divithraju WITH PASSWORD 'POPCON';
+
+-- Create a database named records
+CREATE DATABASE records OWNER divithraju;
+
+-- Connect to the records database
 psql -U divithraju -d records -w
 
--- List tables
+-- List all tables
 \dt
--- List databases
+
+-- List all databases
 \l
--- List users
+
+-- List all users
 \du
 
 -- Create a table named DATA
@@ -36,6 +59,10 @@ SELECT * FROM DATA LIMIT 2;
 
 -- Select specific columns
 SELECT ID, NAME, AGE FROM DATA;
+
+-- List all tables with additional details
+\dt+
+\d DATA
 
 -- Aggregate functions
 SELECT SUM(SALARY) AS "TOTAL SALARY" FROM DATA;
