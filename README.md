@@ -97,27 +97,6 @@ python scripts/run_queries.py
 
 ---
 
-## 📸 Screenshots / Demo
-
-> 📌 **Add before sharing / applying for jobs**
-
-* 📷 Screenshots of queries, dashboards, or analytics outputs
-* 🎥 1–2 minute Loom / YouTube demo video
-
-Example:
-
-```md
-![Query Result](screenshots/query_result.png)
-```
-
-Live Demo (optional):
-
-```
-https://your-demo-link.com
-```
-
----
-
 ## 👨‍💻 My Individual Contributions
 
 * Designed **PostgreSQL schema** and normalized tables
